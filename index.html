@@ -174,7 +174,7 @@
     <footer style="z-index: 999999;">
         © Saulo Ferro - feito com <span style="color: red;">❤️</span>
     </footer>
-    <audio id="birthday-song" src="path/to/your/music.mp4"></audio>
+    <audio id="birthday-song" src="./Parabéns Para Você Happy Birthday Song.mp4"></audio>
     <script>
         function typeWrite(element, text) {
             element.textContent = '';
@@ -261,6 +261,7 @@
         function playBirthdaySong() {
             const audioElement = document.getElementById('birthday-song');
             audioElement.play();
+            document.getElementById('play-button').style.display = 'none';
         }
 
         document.addEventListener('DOMContentLoaded', () => {
