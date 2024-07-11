@@ -173,6 +173,7 @@
     <footer style="z-index: 999999;">
         © Saulo Ferro - feito com <span style="color: red;">❤️</span>
     </footer>
+    <audio id="birthday-song" src="./Parabéns Para Você Happy Birthday Song.mp4"></audio>
     <script>
         function typeWrite(element, text) {
             element.textContent = '';
@@ -256,6 +257,11 @@
             }, 3050);
         }
 
+        function playBirthdaySong() {
+            const audioElement = document.getElementById('birthday-song');
+            audioElement.play();
+        }
+
         document.addEventListener('DOMContentLoaded', () => {
             const messageElement = document.querySelector('.message');
             const text = messageElement.textContent; // Preserve o texto original
@@ -268,8 +274,11 @@
             anoElement.textContent = `${age} anos`;
 
             changeBackground(); // Chame a função changeBackground aqui
+
+            if (confirm('Você quer tocar a música de parabéns para Angelo?')) {
+                playBirthdaySong();
+            }
         });
     </script>
 </body>
 </html>
-
